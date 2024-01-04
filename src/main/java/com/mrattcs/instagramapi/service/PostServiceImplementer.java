@@ -3,7 +3,6 @@ package com.mrattcs.instagramapi.service;
 import com.mrattcs.instagramapi.dto.UserDto;
 import com.mrattcs.instagramapi.exceptions.PostException;
 import com.mrattcs.instagramapi.exceptions.UserException;
-import com.mrattcs.instagramapi.modal.Comment;
 import com.mrattcs.instagramapi.modal.Post;
 import com.mrattcs.instagramapi.modal.User;
 import com.mrattcs.instagramapi.repo.CommentRepository;
@@ -12,7 +11,6 @@ import com.mrattcs.instagramapi.repo.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -88,7 +86,7 @@ public class PostServiceImplementer implements PostService {
     }
 
     @Override
-    public List<Post> findAllPostByUserId(List<Integer> userIds) throws PostException, UserException {
+    public List<Post> findAllPostByUserId(List<Integer> userIds) throws PostException {
 
         List<Post> posts = postRepository.findAllPostByUserIds(userIds);
 

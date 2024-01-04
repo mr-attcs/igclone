@@ -3,7 +3,6 @@ package com.mrattcs.instagramapi.service;
 import com.mrattcs.instagramapi.exceptions.PostException;
 import com.mrattcs.instagramapi.exceptions.UserException;
 import com.mrattcs.instagramapi.modal.Post;
-import com.mrattcs.instagramapi.modal.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
