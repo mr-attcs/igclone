@@ -6,7 +6,6 @@ import com.mrattcs.instagramapi.exceptions.UserException;
 import com.mrattcs.instagramapi.modal.Story;
 import com.mrattcs.instagramapi.modal.User;
 import com.mrattcs.instagramapi.repo.StoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

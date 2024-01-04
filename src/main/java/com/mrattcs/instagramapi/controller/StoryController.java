@@ -6,7 +6,6 @@ import com.mrattcs.instagramapi.modal.Story;
 import com.mrattcs.instagramapi.modal.User;
 import com.mrattcs.instagramapi.service.StoryService;
 import com.mrattcs.instagramapi.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
