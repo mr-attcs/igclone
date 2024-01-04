@@ -1,0 +1,21 @@
+.mobileWallPaper{
+    background-image: url("https://static.cdninstagram.com/images/instagram/xig/homepage/screenshots/screenshot1-2x.png?__d=www");
+    animation: changeBg 8s infinite;
+    background-size: cover;
+}
+
+@keyframes changeBg {
+    
+    0%{
+        background-image: url("https://static.cdninstagram.com/images/instagram/xig/homepage/screenshots/screenshot1-2x.png?__d=www");
+    }
+    25%{
+        background-image: url("https://static.cdninstagram.com/images/instagram/xig/homepage/screenshots/screenshot2-2x.png?__d=www");
+    }
+    50%{
+        background-image: url("https://static.cdninstagram.com/images/instagram/xig/homepage/screenshots/screenshot3-2x.png?__d=www");
+    }
+    75%{
+        background-image: url("https://static.cdninstagram.com/images/instagram/xig/homepage/screenshots/screenshot4-2x.png?__d=www");
+    }
+}

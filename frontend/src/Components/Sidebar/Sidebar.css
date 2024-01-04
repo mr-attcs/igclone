@@ -1,0 +1,33 @@
+.logo-container {
+    position: relative;
+  }
+  
+  .logo-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: difference;
+    background-color: white;
+  }
+  
+  .logo-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: difference;
+    background-color: black;
+  }
+  
+  .logo-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: screen;
+  }
+  
