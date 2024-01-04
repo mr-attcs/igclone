@@ -1,7 +1,6 @@
 package com.mrattcs.instagramapi.service;
 
 import com.mrattcs.instagramapi.repo.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -28,7 +27,7 @@ public class UserUserDetailsService implements UserDetailsService {
 
         Optional<com.mrattcs.instagramapi.modal.User> oUserRepository = userRepository.findByEmail(username);
 
-        if(oUserRepository.isPresent()) {
+        if (oUserRepository.isPresent()) {
             com.mrattcs.instagramapi.modal.User user = oUserRepository.get();
 
             List<GrantedAuthority> authorities = new ArrayList<>();
@@ -36,6 +35,6 @@ public class UserUserDetailsService implements UserDetailsService {
             return new User(user.getEmail(), user.getPassword(), authorities);
         }
 
-        throw new BadCredentialsException("user with username "+ username +" not found");
+        throw new BadCredentialsException("user with username " + username + " not found");
     }
 }
