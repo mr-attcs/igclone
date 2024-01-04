@@ -3,16 +3,12 @@ package com.mrattcs.instagramapi.controller;
 
 import com.mrattcs.instagramapi.exceptions.UserException;
 import com.mrattcs.instagramapi.modal.User;
-import com.mrattcs.instagramapi.response.MessageResponse;
 import com.mrattcs.instagramapi.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
 @RestController
 @RequestMapping("/api/users")
@@ -67,7 +63,6 @@ public class UserController {
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
-//  api/users/search/?="query"
     @GetMapping("/search")
     public ResponseEntity<List<User>> searchUserHandler(@RequestParam("q") String query) throws UserException {
         List<User> users = userService.searchUser(query);

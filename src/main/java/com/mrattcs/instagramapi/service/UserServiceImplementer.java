@@ -6,7 +6,6 @@ import com.mrattcs.instagramapi.modal.User;
 import com.mrattcs.instagramapi.repo.UserRepository;
 import com.mrattcs.instagramapi.security.JwtTokenClaims;
 import com.mrattcs.instagramapi.security.JwtTokenProvider;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -127,30 +126,30 @@ public class UserServiceImplementer implements UserService {
 
     @Override
     public String unFollowUser(Integer reqUserId, Integer followUserId) throws UserException {
-            User reqUser = findUserById(reqUserId);
-            User followUser = findUserById(followUserId);
+        User reqUser = findUserById(reqUserId);
+        User followUser = findUserById(followUserId);
 
-            UserDto follower = new UserDto();
+        UserDto follower = new UserDto();
 
-            follower.setEmail(reqUser.getEmail());
-            follower.setId(reqUser.getId());
-            follower.setName(reqUser.getName());
-            follower.setUserimage(reqUser.getImage());
-            follower.setUsername(reqUser.getUsername());
+        follower.setEmail(reqUser.getEmail());
+        follower.setId(reqUser.getId());
+        follower.setName(reqUser.getName());
+        follower.setUserimage(reqUser.getImage());
+        follower.setUsername(reqUser.getUsername());
 
-            UserDto following = new UserDto();
+        UserDto following = new UserDto();
 
-            following.setEmail(followUser.getEmail());
-            following.setId(followUser.getId());
-            following.setUserimage(followUser.getImage());
-            following.setName(followUser.getName());
-            following.setUsername(followUser.getUsername());
+        following.setEmail(followUser.getEmail());
+        following.setId(followUser.getId());
+        following.setUserimage(followUser.getImage());
+        following.setName(followUser.getName());
+        following.setUsername(followUser.getUsername());
 
-            reqUser.getFollowing().remove(following);
-            followUser.getFollower().remove(follower);
+        reqUser.getFollowing().remove(following);
+        followUser.getFollower().remove(follower);
 
-            userRepository.save(followUser);
-            userRepository.save(reqUser);
+        userRepository.save(followUser);
+        userRepository.save(reqUser);
         return "You have successfully unfollowed " + followUser.getUsername();
     }
 
