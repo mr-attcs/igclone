@@ -1,0 +1,16 @@
+server:
+  port: 5454
+
+#db specific properties
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/instaclonedb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+#ORM s/w specific properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+ 
