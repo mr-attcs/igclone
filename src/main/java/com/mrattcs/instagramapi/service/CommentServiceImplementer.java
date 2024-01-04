@@ -113,7 +113,6 @@ public class CommentServiceImplementer implements CommentService {
             postService.editPost(updatedPost, existingPost);
             commentRepository.deleteById(commentId);
             return "Comment deleted successfully";
-
         }
         throw new CommentException("You can't delete other user's comments.");
     }
