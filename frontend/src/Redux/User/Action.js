@@ -9,7 +9,7 @@ import {
     UPDATE_USER
 } from "./ActionType"
 
-const BASE_URL = "http://localhost:5454/api";
+const BASE_URL = "http://13.48.149.190:8080/api";
 
 export const getUserProfileAction = (jwt) => async (dispatch) => {
 

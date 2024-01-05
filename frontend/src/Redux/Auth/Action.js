@@ -24,7 +24,7 @@ export const signInAction = (data) => async (dispatch) => {
         Authorization: `Basic ${btoa(`${data.email}:${data.password}`)}`
     })
 
-    const res = await fetch('http://localhost:5454/signin', {
+    const res = await fetch('http://13.48.149.190:8080/signin', {
         method: "GET",
         headers: headers
     })
@@ -38,7 +38,7 @@ export const signInAction = (data) => async (dispatch) => {
 
 export const signUpAction = (data) => async (dispatch) => {
     try {
-        const res = await fetch('http://localhost:5454/signup', {
+        const res = await fetch('http://13.48.149.190:8080/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -10,7 +10,7 @@ import {
     UNSAVE_POST
   } from "./ActionType";
   
-  const BASE_URL = "http://localhost:5454/api";
+  const BASE_URL = "http://13.48.149.190:8080/api";
   
   export const createPostAction = (data) => async (dispatch) => {
     try{

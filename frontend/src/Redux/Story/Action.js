@@ -1,6 +1,6 @@
 import { FETCH_FOLLOWING_USER_STORY, FETCH_USER_STORY } from "./ActionType";
 
-const BASE_URL = "http://localhost:5454/api";
+const BASE_URL = "http://13.48.149.190:8080/api";
 
 export const findFollowUserStory = (data) => async(dispatch) => {
     const res = await fetch(
