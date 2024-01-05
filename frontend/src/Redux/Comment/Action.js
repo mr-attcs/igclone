@@ -1,6 +1,6 @@
 import {CREATE_COMMENT, DELETE_COMMENT, GET_POST_COMMENT, LIKE_COMMENT, UNLIKE_COMMENT} from "./ActionType";
 
-const BASE_URL = "http://localhost:5454/api";
+const BASE_URL = "http://13.48.149.190:8080/api";
 
 export const createCommentAction = (data) => async (dispatch) => {
     try {
