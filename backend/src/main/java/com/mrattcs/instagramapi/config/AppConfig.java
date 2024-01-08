@@ -26,7 +26,7 @@ public class AppConfig {
                 .configurationSource(request -> {
                     CorsConfiguration corsConfiguration = new CorsConfiguration();
                     corsConfiguration.setAllowCredentials(true);
-                    corsConfiguration.setAllowedOriginPatterns(List.of("http://localhost:3000"));
+                    corsConfiguration.setAllowedOriginPatterns(List.of("http://mrattcsigclonebucket.s3-website.eu-north-1.amazonaws.com"));
                     corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "OPTIONS", "PUT", "DELETE"));
                     corsConfiguration.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
                     corsConfiguration.setExposedHeaders(Arrays.asList("Authorization"));
